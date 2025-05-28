@@ -6,8 +6,12 @@
     "build:server": "pnpm --filter server build",
     "build": "pnpm run build:client && pnpm run build:server",
     "dev:client": "pnpm --filter client dev",
-    "dev:server": "pnpm --filter server dev"
+    "dev:server": "pnpm --filter server dev",
+    "dev": "concurrently --names \"server,client\" --prefix-colors \"green,blue\" \"pnpm --filter server dev\" \"pnpm --filter client dev\""
   },
   "version": "0.0.0",
-  "packageManager": "pnpm@10.11.0"
+  "packageManager": "pnpm@10.11.0",
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
 }
