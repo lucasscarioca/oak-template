@@ -74,6 +74,10 @@
 	--sidebar-accent-foreground: oklch(0.21 0.006 285.885);
 	--sidebar-border: oklch(0.92 0.004 286.32);
 	--sidebar-ring: oklch(0.723 0.219 149.579);
+
+	/* Custom */
+	--selection: oklch(0.141 0.005 285.823);
+	--selection-foreground: oklch(0.985 0 0);
 }
 
 .dark {
@@ -108,6 +112,10 @@
 	--sidebar-accent-foreground: oklch(0.985 0 0);
 	--sidebar-border: oklch(1 0 0 / 10%);
 	--sidebar-ring: oklch(0.527 0.154 150.069);
+
+	/* Custom */
+	--selection: oklch(1 0 0);
+	--selection-foreground: oklch(0.141 0.005 285.823);
 }
 
 @layer base {
@@ -115,6 +123,10 @@
 		@apply border-border outline-ring/50;
 	}
 	body {
-		@apply bg-background text-foreground;
+		@apply bg-background text-foreground overscroll-none font-sans antialiased;
+	}
+	::selection {
+		background-color: var(--selection);
+		color: var(--selection-foreground);
 	}
 }

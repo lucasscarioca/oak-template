@@ -7,8 +7,6 @@ import { createHTTPServer } from '@trpc/server/adapters/standalone'
 import cors from 'cors'
 import { z } from 'zod'
 
-import { hello } from '@shared/utils'
-
 const t = initTRPC.create()
 
 const publicProcedure = t.procedure
@@ -27,7 +25,6 @@ const appRouter = router({
 		)
 		.query(({ input }) => {
 			// This is what you're returning to your client
-			hello()
 			return {
 				text: `hello ${input?.name ?? 'world'}`,
 				// 💡 Tip: Try adding a new property here and see it propagate to the client straight-away
@@ -44,7 +41,6 @@ createHTTPServer({
 	middleware: cors(),
 	router: appRouter,
 	createContext() {
-		console.log('context 3')
 		return {}
 	},
 }).listen(2022)
