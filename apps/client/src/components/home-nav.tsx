@@ -1,17 +1,16 @@
-import { Link } from 'react-router'
 import { Button } from './ui/button'
 
 export function HomeNav() {
 	return (
 		<nav className='hidden md:flex items-center gap-0.5'>
 			<Button variant='ghost' asChild>
-				<Link to='#pricing'>Pricing</Link>
+				<a href='#pricing'>Pricing</a>
 			</Button>
 			<Button variant='ghost' asChild>
-				<Link to='#faq'>FAQ</Link>
+				<a href='#faq'>FAQ</a>
 			</Button>
 			<Button variant='ghost' asChild>
-				<Link to='#reviews'>Reviews</Link>
+				<a href='#reviews'>Reviews</a>
 			</Button>
 		</nav>
 	)

@@ -6,7 +6,6 @@ import {
 	DropdownMenuItem,
 	DropdownMenuTrigger,
 } from './ui/dropdown-menu'
-import { Link } from 'react-router'
 
 export function HomeMenu() {
 	return (
@@ -20,23 +19,23 @@ export function HomeMenu() {
 			<DropdownMenuContent className='w-[80svw]' align='start'>
 				<DropdownMenuItem asChild>
 					<Button variant='ghost' size='lg' asChild>
-						<Link to='#pricing' className='justify-start'>
+						<a href='#pricing' className='justify-start'>
 							Pricing
-						</Link>
+						</a>
 					</Button>
 				</DropdownMenuItem>
 				<DropdownMenuItem asChild>
 					<Button variant='ghost' size='lg' asChild>
-						<Link to='#faq' className='justify-start'>
+						<a href='#faq' className='justify-start'>
 							FAQ
-						</Link>
+						</a>
 					</Button>
 				</DropdownMenuItem>
 				<DropdownMenuItem asChild>
 					<Button variant='ghost' size='lg' asChild>
-						<Link to='#reviews' className='justify-start'>
+						<a href='#reviews' className='justify-start'>
 							Reviews
-						</Link>
+						</a>
 					</Button>
 				</DropdownMenuItem>
 			</DropdownMenuContent>

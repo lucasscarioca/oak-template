@@ -20,7 +20,9 @@ export function Section({
 			<span className='leading-tight text-2xl font-semibold tracking-tight text-balance'>
 				{title}
 			</span>
-			<div className='mt-6 w-full'>{children}</div>
+			<div className='mt-6 w-full flex flex-col items-center justify-center'>
+				{children}
+			</div>
 		</section>
 	)
 }
